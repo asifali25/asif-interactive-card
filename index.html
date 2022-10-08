@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" defer></script>
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <main class="main">
+      <div class="image">
+        <picture>
+          <source srcset="./images/bg-main-mobile.png" media="(max-width: 1050px)">
+        <img
+          class="image__img"
+          src="./images/bg-main-desktop.png"
+          
+          alt="bg-main-desktop"
+        />
+      </picture>
+      </div>
+      <div class="cardinput">
+        <form class="cardinput__form">
+          <label for="name">CARD HOLDER NAME</label><br />
+          <input
+            type="text"
+            id="name"
+            class="input-width"
+            name="name"
+            placeholder="e.g. Jane Appleseed"
+          />
+          <p class="input-name-wrong display">Can't be blank</p>
+          <br />
+          <label for="number">CARD NUMBER</label><br />
+          <input
+            type="text"
+            class="input-width selectForm"
+            id="number"
+            name="number"
+            maxlength="19"
+            ,
+            placeholder="e.g. 1234 5678 9123 0000"
+          />
+          <p class="input-card-wrong display">Wrong format, numbers only</p>
+          <br />
+          <div class="exp-container">
+            <div class="exp-container-one">
+              <label for="expiry">EXP.DATE(MM/YY)</label><br/>
+              <input
+                type="text"
+                class="expiry-input selectForm"
+                id="expirymm"
+                name="expiry"
+                maxlength="2"
+                placeholder="MM"
+              />
+              <input
+                type="text"
+                class="expiry-input selectForm"
+                id="expiryyy"
+                name="expiry"
+                maxlength="2"
+                placeholder="YY"
+              />
+              <div class="error__box">
+              <p class="error-my display">Wrong format</p>
+              <p class="error-yyy display">Wrong format</p>
+            </div>
+            </div>
+            <div class="exp-container-two">
+              <label for="CVC">CVC</label><br />
+              <input
+                type="text"
+                class="input-width selectForm"
+                id="cvc"
+                name="cvc"
+                maxlength="3"
+                placeholder="e.g. 123"
+              />
+              <p class="cvc-error display">Wrong format</p>
+            </div>
+          </div>
+          <button class="cardinput__form__btn" id="formSub">Confirm</button>
+        </form>
+        <div class="successful remove">
+          <img class="successful__img" src="./images/icon-complete.svg">
+          <h1 class="successful__h1">THANK YOU!</h1>
+          <P class="successful__p">We've added your card details</P>
+          <button class="cardinput__form__btn" id="success-btn">Continue</button>
+        </div>
+      </div>
+      <div class="card-front">
+        <div class="card-front__container">
+          <div class="card-front__container-circle">
+            <div class="card-front__circle-one"></div>
+            <div class="card-front__circle-two"></div>
+          </div>
+          <h1 class="card-front__container-num">0000 0000 0000 0000</h1>
+          <div class="card-front__container-box">
+            <h2 class="card-front__container-h2" id="card-name">JANE APPLESEED</h2>
+            <h2 class="card-front__container-h2" id="card-exp"><span class="card-exp-mm">00</span>/<span class="card-exp-yy">00</span></h2>
+          </div>
+        </div>
+      </div>
+      <div class="card-back">
+        <div class="card-back-container">
+        <p class="card-back-p">000</p>
+      </div>
+      </div>
+    </main>
+
+    <p class="para"></p>
+
+   
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Asif Ali</a>.
+    </div>
+  </body>
+</html>

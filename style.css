@@ -1,0 +1,300 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 62.5%;
+  font-weight: 500;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100vw;
+  position: relative;
+}
+
+.image {
+  display: block;
+  flex: 25%;
+}
+
+.image__img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+.cardinput {
+  flex: 75%;
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardinput__form {
+  width: min(80%, 500px);
+  margin: 30px;
+}
+
+.expiry-input {
+  width: 43%;
+}
+
+.input-width {
+  width: 100%;
+}
+
+label {
+  font-size: 1.8rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  font-size: clamp(1.4rem, 1vw, 1.8rem);
+}
+
+.exp-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.exp-container-one {
+  flex: 50%;
+}
+
+.exp-container-two {
+  flex: 50%;
+}
+
+input {
+  padding: 1.8rem;
+  border: 2px solid hsl(270, 3%, 87%);
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+input::placeholder {
+  color: hsl(270, 3%, 87%);
+  font-size: clamp(1.4rem, 1vw, 1.8rem);
+}
+
+.cardinput__form__btn {
+  width: 100%;
+  padding: 20px;
+  font-size: 1.8rem;
+  border: none;
+  border-radius: 10px;
+  background-color: hsl(278, 68%, 11%);
+  color: hsl(270, 3%, 87%);
+  letter-spacing: 1px;
+}
+
+.card-front {
+  background-image: url("./images/bg-card-front.png");
+  background-size: cover;
+  background-position: center;
+  width: min(90%,400px);
+  height: 210px;
+  position: absolute;
+  border-radius: 10px;
+  top: 100px;
+  left: 10%;
+  transform: translate(-10%, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-back {
+  background-image: url("./images/bg-card-back.png");
+  background-size: cover;
+  background-position: center;
+  width: min(90%,400px);
+  height: 210px;
+  position: absolute;
+  border-radius: 10px;
+  top: 350px;
+  left: 14%;
+  transform: translate(-14%, 0);
+}
+.card-back-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.card-back-p {
+  position: absolute;
+  top: 95px;
+  right: 50px;
+  font-size: 1.5rem;
+  color: hsl(0, 0%, 100%);
+  letter-spacing: 1.5px;
+}
+
+.card-front__container {
+  width: 90%;
+  height: 80%;
+}
+
+.card-front__container-circle {
+  width: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.card-front__circle-one {
+  width: 40px;
+  height: 40px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 50%;
+}
+
+.card-front__circle-two {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 0.5px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
+}
+
+.card-front__container-num {
+  font-size: clamp(2.2rem, 1.9vw,3rem);
+  color: hsl(0, 0%, 100%);
+  font-weight: 100;
+  margin-bottom: 20px;
+  letter-spacing: 1.4px;
+}
+
+.card-front__container-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-front__container-h2 {
+  color: hsl(0, 0%, 100%);
+  font-weight: 100;
+  letter-spacing: 1.5px;
+}
+
+.successful {
+  width: min(80%, 500px);
+  margin: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.successful.remove {
+  display: none;
+}
+
+.successful__img {
+  display: inline-block;
+  width: 100px;
+  margin-bottom: 40px;
+}
+
+.successful__h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  letter-spacing: 1.5px;
+}
+
+.successful__p {
+  font-size: 1.8rem;
+  margin-bottom: 70px;
+  color: hsl(279, 6%, 55%);
+}
+
+#name:focus {
+  outline-color: hsl(278, 94%, 30%);
+}
+
+.input-card-wrong {
+  color: red;
+}
+
+.input-card-wrong.display {
+  visibility: hidden;
+}
+
+.input-name-wrong {
+  color: red;
+}
+
+.input-name-wrong.display {
+  visibility: hidden;
+}
+
+#number:focus {
+  outline-color: hsl(278, 94%, 30%);
+}
+
+#expirymm {
+  outline-color: hsl(278, 94%, 30%);
+}
+
+.error-my {
+  color: red;
+}
+
+.error-my.display {
+  opacity:0%;
+}
+
+.error__box {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 30px;
+}
+
+#expiryyy {
+  outline-color: hsl(278, 94%, 30%);
+}
+
+.error-yyy {
+ color: red;
+}
+
+.error-yyy.display {
+    opacity: 0%;
+}
+
+.cvc-error {
+    color: red;
+}
+
+.cvc-error.display {
+    visibility: hidden;
+}
+
+@media screen and (max-width: 1050px) {
+  .card-front {    
+    top: 150px;
+    left: 10%;
+    z-index: 2;   
+  }
+  
+  .card-back {    
+    top: 10px;
+    left: 18%;
+  }
+  .image {
+    flex: 100%;
+    margin-bottom: 30%;
+  }
+
+  .cardinput {
+    flex: 100%;
+  }
+}
